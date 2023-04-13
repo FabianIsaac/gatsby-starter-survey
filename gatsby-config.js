@@ -13,7 +13,7 @@ module.exports = {
     title: 'Encuesta de comunicaciones internas',
     description: 'Comunicaciones internas',
     author: '@avocadostudio',
-    siteUrl: 'avocadostudio.cl',
+    siteUrl: 'http://avocadostudio.cl',
   },
 
   pathPrefix: "/",
