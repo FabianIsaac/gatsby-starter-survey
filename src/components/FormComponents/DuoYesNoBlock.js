@@ -10,10 +10,29 @@ import {
 } from "@mui/material";
 
 const DuoYesNoBlock = forwardRef((props, ref) => {
-	const { parameters, number } = props;
+	const { parameters, number, assets } = props;
 	const { headers, cols, inputs } = parameters;
 
 	const [checkboxA, setcheckboxA] = useState([]);
+
+	const getResource = (resource_id) => {
+		const resource = assets.find((asset) => asset.id === resource_id);
+		return (
+			<Box
+				sx={{
+					width: { xs: "200px", md: "50%" },
+					marginX: { xs: "auto", md: "0" },
+				}}
+			>
+				<img
+					src={resource.src.publicURL}
+					width="100%"
+					alt={resource.alt}
+					style={{ display: "block" }}
+				/>
+			</Box>
+		);
+	};
 
 	return (
 		<Container sx={{ paddingTop: 2, paddingX: 1 }} ref={ref}>
@@ -64,20 +83,8 @@ const DuoYesNoBlock = forwardRef((props, ref) => {
 								marginY={2}
 								textAlign={{ xs: "center", md: "left" }}
 							>
-								<Box
-									sx={{
-										width: { xs: "200px", md: "50%" },
-										marginX: { xs: "auto", md: "0" },
-										display: row.src !== "" ? "block" : "none",
-									}}
-								>
-									<img
-										src={row.src}
-										width="100%"
-										alt={`imagen sobre ${row.text}`}
-										style={{ display: "block" }}
-									/>
-								</Box>
+								{row.resource && getResource(row.resource)}
+
 								<Typography>
 									{/* rome-ignore lint/security/noDangerouslySetInnerHtml: <explanation> */}
 									<span dangerouslySetInnerHTML={{ __html: row.text }} />

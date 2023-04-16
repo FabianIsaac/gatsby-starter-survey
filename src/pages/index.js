@@ -4,6 +4,7 @@ import { useStaticQuery, graphql } from "gatsby";
 
 import GenerateBlocks from "../components/UiComponents/GenerateBlocks";
 import Header from "../components/UiComponents/Header";
+import { GATSBY_PAGE_TITLE } from "../environment";
 
 const IndexPage = () => {
 	const Data = useStaticQuery(graphql`
@@ -38,9 +39,7 @@ const IndexPage = () => {
                 }
                 cols {
                   text
-                  custom_background {
-                    src 
-                  }
+                  resource
                 }
                 inputs {
                   data_a {
@@ -83,6 +82,13 @@ const IndexPage = () => {
                 backgroundColor
               }
             }
+            assets {
+              id
+              type
+              src {
+                publicURL
+              }
+            }
           }
         }
     `);
@@ -90,7 +96,7 @@ const IndexPage = () => {
 	return (
 		<>
 			<Header header={Data.surveyJson.header} />
-			<GenerateBlocks blocks={Data.surveyJson.blocks} />
+			<GenerateBlocks blocks={Data.surveyJson.blocks} assets={Data.surveyJson.assets} />
 		</>
 	);
 };
@@ -100,6 +106,6 @@ const IndexPage = () => {
  *
  * See: https://www.gatsbyjs.com/docs/reference/built-in-components/gatsby-head/
  */
-export const Head = () => <Seo title="Home" />;
+export const Head = () => <Seo title={GATSBY_PAGE_TITLE} />;
 
 export default IndexPage;

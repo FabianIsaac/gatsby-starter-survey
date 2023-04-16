@@ -14,11 +14,11 @@ import PaperBlock from "./PaperBlock";
 import { Typography } from "@mui/material";
 
 const GetBlock = forwardRef((props, ref) => {
-	const { block } = props;
+	const { block, assets } = props;
 	const { parameters, configurations, text, number } = block;
 
 	switch (block.type) {
-		case "slide":
+		case "slider":
 			return (
 				<PaperBlock>
 					<Typography variant='body1'>
@@ -83,7 +83,7 @@ const GetBlock = forwardRef((props, ref) => {
 					<Typography variant='body1'>
 						<Typography variant='bold'>{number}.-</Typography> {text}
 					</Typography>
-					<DuoYesNoBlock ref={ref} parameters={parameters} number={number} />
+					<DuoYesNoBlock ref={ref} parameters={parameters} number={number} assets={assets}/>
 				</PaperBlock>
 			);
 

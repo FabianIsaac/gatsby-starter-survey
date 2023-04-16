@@ -20,7 +20,7 @@ const ComplementaryYesNoBlock = forwardRef((props, ref) => {
 	const [disableTextArea, setdisableTextArea] = useState(complementCondition);
 
 	return (
-		<Container ref={ref} key={number}>
+		<Container ref={ref} key={`ComplementaryYesNoBlock_${number}`}>
 			<Grid
 				container
 				direction="row"
@@ -66,6 +66,5 @@ const ComplementaryYesNoBlock = forwardRef((props, ref) => {
 		</Container>
 	);
 });
-
 
 export default ComplementaryYesNoBlock;

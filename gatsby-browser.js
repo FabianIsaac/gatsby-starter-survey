@@ -14,6 +14,7 @@ import theme from './src/theme/theme';
 export function wrapRootElement({ element }) {
 
     return (
+        // Envolvemos todas las paginas del sitio con el tema para poder usarlo en cualquier parte
         <ThemeProvider theme={theme}>
             <CssBaseline />
             {element}

@@ -6,7 +6,6 @@ import AdvertisementBlock from "./AdvertisementBlock";
 const Header = forwardRef((props, ref) => {
 	const { header } = props;
 	const { welcome, advertisement, custom_background, thanks } = header;
-	console.log(thanks);
 	return (
 		<Container ref={ref}>
 			{custom_background && (

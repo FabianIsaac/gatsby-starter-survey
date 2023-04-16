@@ -48,7 +48,7 @@
 		},
 		{
 			"number": 1,
-			"type": "slide",
+			"type": "slider",
 			"text": "Indícanos tu grado de satisfacción con la comunicación interna de Lorem, utilizando una escala de 1 a 7, siendo 1 “Totalmente insatisfecho” y 7 “Totalmente satisfecho”.",
 			"parameters": {
 				"inputs": [
@@ -356,81 +356,12 @@
 								"name": "6_A_A",
 								"negative_text": "No recuerdo",
 								"positive_text": "Sí recuerdo"
-							},
-							{
-								"name": "6_B_A",
-								"negative_text": "No recuerdo",
-								"positive_text": "Sí recuerdo"
-							},
-							{
-								"name": "6_C_A",
-								"negative_text": "No recuerdo",
-								"positive_text": "Sí recuerdo"
-							},
-							{
-								"name": "6_D_A",
-								"negative_text": "No recuerdo",
-								"positive_text": "Sí recuerdo"
-							},
-							{
-								"name": "6_E_A",
-								"negative_text": "No recuerdo",
-								"positive_text": "Sí recuerdo"
-							},
-							{
-								"name": "6_F_A",
-								"negative_text": "No recuerdo",
-								"positive_text": "Sí recuerdo"
-							},
-							{
-								"name": "6_G_A",
-								"negative_text": "No recuerdo",
-								"positive_text": "Sí recuerdo"
-							},
-							{
-								"name": "6_H_A",
-								"negative_text": "No recuerdo",
-								"positive_text": "Sí recuerdo"
 							}
+							
 						],
 						"data_b": [
 							{
 								"name": "6_A_B",
-								"negative_text": "No me permitió entender",
-								"positive_text": "Sí me permitió entender"
-							},
-							{
-								"name": "6_B_B",
-								"negative_text": "No me permitió entender",
-								"positive_text": "Sí me permitió entender"
-							},
-							{
-								"name": "6_C_B",
-								"negative_text": "No me permitió entender",
-								"positive_text": "Sí me permitió entender"
-							},
-							{
-								"name": "6_D_B",
-								"negative_text": "No me permitió entender",
-								"positive_text": "Sí me permitió entender"
-							},
-							{
-								"name": "6_E_B",
-								"negative_text": "No me permitió entender",
-								"positive_text": "Sí me permitió entender"
-							},
-							{
-								"name": "6_F_B",
-								"negative_text": "No me permitió entender",
-								"positive_text": "Sí me permitió entender"
-							},
-							{
-								"name": "6_G_B",
-								"negative_text": "No me permitió entender",
-								"positive_text": "Sí me permitió entender"
-							},
-							{
-								"name": "6_H_B",
 								"negative_text": "No me permitió entender",
 								"positive_text": "Sí me permitió entender"
 							}
@@ -440,51 +371,7 @@
 				"cols": [
 					{
 						"text": "<b>SEGURIDAD Y SALUD</b>",
-						"custom_background": {
-							"src": "../../assets/images/header.png"
-						}
-					},
-					{
-						"text": "<b>BENEFICIOS FLEXIBLES</b>",
-						"custom_background": {
-							"src": "../../assets/images/header.png"
-						}
-					},
-					{
-						"text": "<b>SGIR</b>",
-						"custom_background": {
-							"src": "../../assets/images/header.png"
-						}
-					},
-					{
-						"text": "<b>EVALUACIÓN DE DESEMPEÑO</b>",
-						"custom_background": {
-							"src": "../../assets/images/header.png"
-						}
-					},
-					{
-						"text": "<b>RETORNO PAULATINO</b>",
-						"custom_background": {
-							"src": "../../assets/images/header.png"
-						}
-					},
-					{
-						"text": "<b>CIBERLIGA Lorem</b>",
-						"custom_background": {
-							"src": "../../assets/images/header.png"
-						}
-					},
-					{
-						"text": "<b>MODELO NUEVAS COMPETENCIAS</b>",
-						"custom_background": {
-							"src": "../../assets/images/header.png"
-						}
-					},
-					{
-						"text": "<b>MÁS UNIDOS QUE NUNCA</b>",
-						"custom_background": {
-							"src": "../../assets/images/header.png"
-						}
+						"resource": "asset_one"
 					}
 				]
 			}
@@ -707,6 +594,14 @@
 					}
 				]
 			}
+		}
+	],
+	"assets": [
+		{
+			"id": "asset_one",
+			"src": "../../assets/images/cover.png",
+			"type": "img",
+			"alt": "Imagen de placeholder"
 		}
 	]
 }
