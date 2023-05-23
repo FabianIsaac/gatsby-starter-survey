@@ -1,9 +1,12 @@
 import { Button, Grid } from "@mui/material";
 import React, { forwardRef } from "react";
 import SendIcon from "@mui/icons-material/Send";
+import useSendData from "../../hooks/useSendData";
 
 const FormBlock = forwardRef((props, ref) => {
 	const { children } = props;
+
+	const { handleSubmit } = useSendData();
 
 	return (
 		<form ref={ref}>
@@ -18,6 +21,7 @@ const FormBlock = forwardRef((props, ref) => {
 			>
 				<Grid item xs={12} sm={3} md={2}>
 					<Button
+						onClick={handleSubmit}
 						variant="contained"
 						fullWidth
 						color="primary"
@@ -31,9 +35,5 @@ const FormBlock = forwardRef((props, ref) => {
 		</form>
 	);
 });
-
-// FormBlock.propTypes = {
-// 	children: PropTypes.node.isRequired
-// };
 
 export default FormBlock;
